@@ -1,14 +1,37 @@
-**Media Stream Negotiation: **
-WebRTC involves negotiating media streams between peers. The addTrack() method is used to add audio and video tracks from the local stream to the peer connection. These tracks are then negotiated between peers during the offer/answer exchange to establish a common media format for communication.
+# Video Conferencing Web App
 
-**Establishing Bi-Directional Communication: **
-By adding local tracks to the peer connection, you enable bi-directional communication between peers. Your local audio and video tracks are sent to the remote peer, allowing them to see and hear you. Similarly, the remote peer's audio and video tracks are received and played back locally.
+A real-time video conferencing web app built using the MERN stack (MongoDB, Express, React, Node.js) with WebRTC integration. This app allows users to connect through seamless video calls, offering high-quality communication for both personal and professional meetings.
 
-**Codec Negotiation: **
-Adding tracks to the peer connection triggers codec negotiation between peers. WebRTC negotiates codecs based on the capabilities of each peer's device and network conditions to ensure optimal audio and video quality during communication.
+## About Video Conferencing with WebRTC
 
-**ICE Candidate Exchange: **
-The addition of tracks to the peer connection triggers the gathering and exchange of ICE (Interactive Connectivity Establishment) candidates. ICE candidates facilitate NAT traversal and enable peers to establish direct peer-to-peer connections, even when behind firewalls or NAT devices.
+WebRTC (Web Real-Time Communication) is a technology that enables peer-to-peer audio, video, and data sharing between web browsers without the need for additional plugins or software. WebRTC provides several advantages for building video conferencing applications:
 
-**Signaling: **
-Once local tracks are added to the peer connection, the peer connection's local description is updated. This local description includes information about the local media streams and ICE candidates, which is then sent to the remote peer through a signaling channel for negotiation.
+### Advantages of WebRTC for Video Conferencing
+
+- *Low Latency*: WebRTC offers minimal delay, ensuring real-time communication between participants, crucial for smooth video calls.
+  
+- *Peer-to-Peer Communication*: By directly connecting participants' devices without routing through a server (except for signaling), WebRTC reduces the load on servers and increases call quality.
+  
+- *No Plugins or Installations*: Since WebRTC is a native browser feature, users do not need to install additional software or plugins, making it easy to use directly from a browser.
+  
+- *Cross-Platform Support*: WebRTC works across different browsers and devices, allowing participants to join meetings from desktops, laptops, and mobile devices seamlessly.
+  
+- *Secure Communication*: WebRTC includes built-in encryption for both audio and video streams, ensuring secure and private communication.
+  
+- *Scalable*: WebRTC supports group video calls, enabling multiple participants to join a conference with high-quality video and audio.
+
+## Tech Stack
+
+- *MongoDB*: NoSQL database for storing user data.
+- *Express.js*: Backend framework for building APIs.
+- *React*: Frontend framework for building the user interface.
+- *Node.js*: Server-side JavaScript runtime.
+- *WebRTC*: Peer-to-peer communication for video, audio, and data transfer.
+- *Socket.io*: Real-time event-driven communication for signaling.
+
+## Installation
+
+### Prerequisites
+
+- Node.js (version >=14)
+- MongoDB (local or cloud service like MongoDB Atlas)
